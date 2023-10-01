@@ -69,6 +69,19 @@ body {
 .generated-password {
   background-color: var(--dark-grey);
   padding: 1.8rem 3.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-copy {
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  transition: 0.15s ease-in-out;
+}
+.btn-copy:active {
+  transform: scale(0.98) translateY(2px);
 }
 
 /*GENERATE PASSWORD*/
@@ -77,9 +90,6 @@ body {
   padding: 2.4rem 3.2rem;
 }
 
-.length {
-  /* padding: 3.4rem 0 4.2rem; */
-}
 .length > div {
   display: flex;
   justify-content: space-between;
