@@ -1,29 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Password generator app</title>
-</head>
-<body>
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Frontend Mentor | Password generator app</title>
+  </head>
+  <body>
+    <div class="app-container">
+      <h1 class="heading--medium">Password generator</h1>
+      <div class="generated-password">
+        <span class="password heading--large">PTx1f5DaFX</span>
+      </div>
 
-  Password Generator
+      <div class="generate">
+        <form action="#">
+          <div class="length">
+            <div class="mg-bottom-sm">
+              <span class="length__heading">Character Length</span>
+              <span class="length__number">10</span>
+            </div>
+            <input type="range" id="range" class="length__input" />
+          </div>
 
-  P4$5W0rD!
+          <div class="include">
+            <div>
+              <input type="checkbox" name="uppercase" id="uppercase" />
+              <label for="uppercase">Include Uppercase Letters</label>
+            </div>
+            <div>
+              <input type="checkbox" name="lowercase" id="lowercase" />
+              <label for="lowercase">Include Lowercase Letters</label>
+            </div>
+            <div>
+              <input type="checkbox" name="numbers" id="numbers" />
+              <label for="numbers">Include numbers Letters</label>
+            </div>
+            <div>
+              <input type="checkbox" name="symbols" id="symbols" />
+              <label for="symbols">Include Symbols Letters</label>
+            </div>
+          </div>
+        </form>
 
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
-
-</body>
+        <div class="strength">
+          <p class="strength__title">Strength</p>
+          <p class="strength__level">Medium 2</p>
+          <div class="strength__rating-box">
+            <div class="rating-box__color green"></div>
+            <div class="rating-box__color yellow"></div>
+            <div class="rating-box__color orange"></div>
+            <div class="rating-box__color red"></div>
+          </div>
+        </div>
+        <button class="btn-generate">Generate <span class="arrow"></span></button>
+      </div>
+    </div>
+  </body>
 </html>
