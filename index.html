@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="script.js"></script>
+
     <title>Frontend Mentor | Password generator app</title>
   </head>
   <body>
@@ -14,7 +15,7 @@
       <h1 class="heading--medium">Password generator</h1>
 
       <div class="generated-password">
-        <span class="password heading--large">PTx1f5DaFX</span>
+        <span class="password heading--large empty">P4$%W0rD!</span>
         <span class="copied">Copied</span>
         <button class="btn-copy">
           <svg width="21" height="24" xmlns="http://www.w3.org/2000/svg">
@@ -37,11 +38,11 @@
 
           <div class="include">
             <div>
-              <input type="checkbox" name="uppercase" id="uppercase" />
+              <input type="checkbox" name="uppercase" id="uppercase" checked />
               <label for="uppercase">Include Uppercase Letters</label>
             </div>
             <div>
-              <input type="checkbox" name="lowercase" id="lowercase" />
+              <input type="checkbox" name="lowercase" id="lowercase" checked />
               <label for="lowercase">Include Lowercase Letters</label>
             </div>
             <div>
@@ -57,12 +58,12 @@
 
         <div class="strength">
           <p class="strength__title">Strength</p>
-          <p class="strength__level">Medium 2</p>
+          <p class="strength__level"></p>
           <div class="strength__rating-box">
-            <div class="rating-box__color green"></div>
-            <div class="rating-box__color yellow"></div>
-            <div class="rating-box__color orange"></div>
-            <div class="rating-box__color red"></div>
+            <div class="rating-box__color"></div>
+            <div class="rating-box__color"></div>
+            <div class="rating-box__color"></div>
+            <div class="rating-box__color"></div>
           </div>
         </div>
         <button class="btn-generate" id="generate">Generate <span class="arrow"></span></button>

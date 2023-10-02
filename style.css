@@ -73,6 +73,10 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+
+.password.empty {
+  color: rgb(230, 229, 234, 0.5);
+}
 .copied {
   margin-left: auto;
   margin-right: 1.6rem;
@@ -199,6 +203,7 @@ input[type='checkbox']:active {
   border-color: var(--green);
 }
 
+/*PASSWORD STRENGH*/
 .strength {
   background-color: var(--very-dark-grey);
   margin-top: 3.2rem;
@@ -228,27 +233,29 @@ input[type='checkbox']:active {
   width: 1rem;
   border: 2px solid var(--light-grey);
 }
-.rating-box__color.green {
+
+.strength__rating-box.strong > * {
   color: var(--green);
   background-color: currentColor;
   border-color: currentColor;
 }
-.rating-box__color.yellow {
+.strength__rating-box.medium .rating-box__color:nth-child(-n + 3) {
   color: var(--yellow);
   background-color: currentColor;
   border-color: currentColor;
 }
-.rating-box__color.orange {
+.strength__rating-box.week .rating-box__color:nth-child(-n + 2) {
   color: var(--orange);
   background-color: currentColor;
   border-color: currentColor;
 }
-.rating-box__color.red {
+.strength__rating-box.too-week .rating-box__color:nth-child(-n + 1) {
   color: var(--red);
   background-color: currentColor;
   border-color: currentColor;
 }
 
+/*BTN GENERATE */
 .btn-generate {
   color: var(--very-dark-grey);
   background-color: var(--green);
