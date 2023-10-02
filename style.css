@@ -23,7 +23,7 @@ html {
   --yellow: #f8cd65;
 }
 body {
-  background-color: var(--very-dark-grey);
+  background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,6 +53,7 @@ body {
 .mg-bottom-md {
   margin-bottom: 4.2rem;
 }
+
 /*********************************/
 /*APP*/
 /*********************************/
@@ -74,9 +75,6 @@ body {
   align-items: center;
 }
 
-.password.empty {
-  color: rgb(230, 229, 234, 0.5);
-}
 .copied {
   margin-left: auto;
   margin-right: 1.6rem;
@@ -94,10 +92,23 @@ body {
   cursor: pointer;
   background-color: inherit;
   border: none;
-  transition: 0.15s ease-in-out;
+  transition: 0.2s ease-in-out;
+  fill: var(--green);
+}
+.btn-copy:hover {
+  fill: var(--light-grey);
 }
 .btn-copy:active {
+  fill: var(--light-grey);
   transform: scale(0.98) translateY(2px);
+}
+
+.generated-password.empty .heading--large {
+  color: rgb(230, 229, 234, 0.5);
+}
+.generated-password.empty .btn-copy {
+  pointer-events: none;
+  fill: rgb(230, 229, 234, 0.5);
 }
 
 /*GENERATE PASSWORD*/

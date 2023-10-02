@@ -3,9 +3,10 @@
 const sliderEl = document.querySelector('#range');
 const sliderValue = document.querySelector('.length__value');
 
+const passwordContainer = document.querySelector('.generated-password');
+const passwordEl = document.querySelector('.password');
 const btnCopy = document.querySelector('.btn-copy');
 const copiedTextEl = document.querySelector('.copied');
-const passwordEl = document.querySelector('.password');
 
 const btnGenerate = document.querySelector('#generate');
 const lowercase = document.getElementById('lowercase');
@@ -57,16 +58,16 @@ const generatePassword = function () {
   for (let i = 0; i < length; i++) {
     password.push(charSet[Math.trunc(Math.random() * charSet.length)]);
   }
-  passwordEl.classList.remove('empty');
+
+  passwordContainer.classList.remove('empty');
   passwordEl.textContent = password.join('');
 
   renderPasswordStrengh(password.join(''));
 };
 
 const copyPassword = function () {
-  if (passwordEl.classList.contains('empty')) return;
-
   navigator.clipboard.writeText(passwordEl.textContent);
+
   copiedTextEl.classList.add('show');
 
   setTimeout(() => {
