@@ -278,3 +278,6 @@ input[type='checkbox']:active {
   background-color: var(--dark-grey);
   border-color: currentColor;
 }
+.btn-generate:active {
+  transform: scale(0.98) translateY(2px);
+}

@@ -7,6 +7,32 @@ const btnCopy = document.querySelector('.btn-copy');
 const copiedTextEl = document.querySelector('.copied');
 const passwordEl = document.querySelector('.password');
 
+const btnGenerate = document.querySelector('#generate');
+const lowercase = document.getElementById('lowercase');
+const uppercase = document.getElementById('uppercase');
+const symbols = document.getElementById('symbols');
+const numbers = document.getElementById('numbers');
+
+const generatePassword = function () {
+  let charSet = '';
+  let password = [];
+  const length = +sliderValue.textContent;
+
+  const lowercaseSet = `abcdefghijklmnopqrstuvwxyz`;
+  const uppercaseSet = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
+  const numbersSet = `0123456789`;
+  const symbolsSet = `!@#$&*?|%+-_./:;=()[]{}`;
+
+  if (lowercase.checked) charSet += lowercaseSet;
+  if (uppercase.checked) charSet += uppercaseSet;
+  if (symbols.checked) charSet += symbolsSet;
+  if (numbers.checked) charSet += numbersSet;
+
+  for (let i = 0; i < length; i++) {
+    password.push(charSet[Math.trunc(Math.random() * charSet.length)]);
+  }
+  passwordEl.textContent = password.join('');
+};
 const copyPassword = function () {
   navigator.clipboard.writeText(passwordEl.textContent);
   copiedTextEl.classList.add('show');
@@ -16,7 +42,7 @@ const copyPassword = function () {
   }, 2000);
 };
 
-const renderPasswordLength = function (e) {
+const renderPasswordLengthBar = function (e) {
   const tempSliderValue = e.target.value;
   sliderValue.textContent = tempSliderValue;
 
@@ -28,7 +54,8 @@ const renderPasswordLength = function (e) {
 //EVENT LISTENERS
 
 sliderEl.addEventListener('input', (e) => {
-  renderPasswordLength(e);
+  renderPasswordLengthBar(e);
 });
 
 btnCopy.addEventListener('click', copyPassword);
+btnGenerate.addEventListener('click', generatePassword);
