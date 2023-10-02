@@ -9,6 +9,14 @@
 }
 html {
   font-size: 62.5%;
+
+  @media (max-width: 37.5em) {
+    font-size: 56.25%;
+  }
+
+  @media (max-width: 31.25em) {
+    font-size: 50%;
+  }
 }
 
 /*Color variables*/
@@ -33,6 +41,11 @@ body {
   font-weight: 700;
   font-size: 1.8rem;
   line-height: 2.3rem;
+  margin: 0 auto;
+
+  @media (max-width: 31.25em) {
+    width: 95vw;
+  }
 }
 .heading--large {
   font-size: 3.2rem;
